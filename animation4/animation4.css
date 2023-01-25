@@ -1,0 +1,180 @@
+
+@font-face {
+    font-family:"aktiv-grotesk";
+    src:url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+    }
+    
+    
+    html body .vc_row-fluid>.span_12>.wpb_column:not([class*=offset-]) {
+      margin-left: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    a:link { text-decoration: none;
+    }
+    .lottie-trigger, .lottie-trigger2, .lottie-trigger3, 
+    .lottie-trigger4, .lottie-trigger5, .lottie-trigger6, 
+    .lottie-trigger7{
+     /* height: 100vh;  */
+    width: 100vw;
+    }
+    .buttonsWraps{
+        box-sizing: border-box;
+        list-style: none;
+        width: 100px;
+        position: fixed;
+        bottom: 80px; 
+        z-index: 100;
+      }
+      .buttonsAnimations{
+          font-family: "aktiv-grotesk",sans-serif;
+          border: 2px solid black;
+          color: black;
+          border-radius: 20px;
+          padding: 5px 12px 2px 12px;
+          cursor: pointer;
+          font-size: 17px;
+      }
+
+    /*-------------------------------------Animation4*/
+    .containerFlex{
+        display: flex!important;
+      }
+      .justContCenter{
+        justify-content: center!important;
+        align-items: center;
+      }
+      .zIndex101{
+        z-index: 101!important;
+      }
+      .zIndex-1{
+        z-index: -1!important;
+      }
+      .positionTop25{
+        position: absolute;
+        top: 25%!important;
+      }
+      .mt-3{
+        margin-top: 30px;
+      }
+      .space20{
+        margin-top: 20px;
+      }
+      .spaceTitleHeroSecondLine{
+        margin-top: 240px;
+      }
+
+      .marginTopArrow41{
+            margin-top: 75px;
+      }
+      .marginTopArrow42{
+        margin-top: 75px;
+  }
+  .marginTopArrow3{
+    margin-top: 150px;
+}
+      .black{
+        color: black!important;
+      }
+      
+      .titleHeroAnimationSection2{
+        font-family: "aktiv-grotesk",sans-serif;
+        font-weight: 800;
+        width: 90%;
+        position: absolute;
+        top: 30%;
+        opacity: 0;
+        z-index: 100;
+      }
+      .titleHeroMegaBoltLineAnimation2{
+        /* font-size: 4.5rem; */
+        font-size: 90px;
+        text-align: center;
+        line-height: 0.8;
+      }
+      .highLighter{
+        position:relative;
+      }
+      .highLighter:before{
+        content:"";
+        background-color:#CDDB23;
+        width:100%;
+        height:0.85em;
+        position:absolute;
+        z-index:-1;
+        /*filter:url(#marker-shape);*/
+        left:-0.25em;
+        top:0em;
+        padding:0 0.2em;
+      }
+
+    .butonUnderHeroTitle{
+        /* margin: aunto; */
+        color: black;
+        cursor: pointer;
+      }
+      .arrowBlackBGWhite2{
+        width: 13px!important;
+        position:relative;
+        left: 30px;
+        /* bottom: -15px; */
+      }
+      .arrowWhiteBGWhite2{
+        width: 13px!important;
+        position:relative;
+        left:-20px;
+        opacity: 0;
+      }
+          
+    .butonUnderHeroTitle:hover .arrowBlackBGWhite2{
+        transform: rotate(45deg);
+        transition: 0.5s all;
+      
+      }
+      .buttonsAnimations:hover, .buttonsAnimations:active{
+        background-color: #002527;
+        color: #fff;
+        transition: all 350ms;
+      }
+      .buttonSelected{
+        background-color: #002527;
+        color: #fff;
+      }
+      .boxInfoCenter{
+        font-family: "aktiv-grotesk",sans-serif;
+        width: 27.5%;
+        height: auto;
+        position: absolute;
+        line-height: 1.2;
+        top: 47%;
+        left: 50%;
+        opacity: 0;
+        font-size: 1.5rem;
+        transform: translate(-50%, -50%);
+        text-align: left!important;
+      }
+      
+      
+
+    /************************LAPTOP************/
+@media (max-width: 1919px){
+
+      .boxInfoCenter{
+        font-size: 1.3rem;
+      }
+      .titleHeroMegaBoltLineAnimation2{
+        /* font-size: 4.5rem; */
+        font-size: 70px;
+        text-align: center;
+        line-height: 0.8;
+      }
+      .buttonsAnimations{
+        padding: 4px 12px 2px 12px;
+        font-size: 15px;
+    }
+    .spaceTitleHeroSecondLine{
+         margin-top: 200px; 
+      }
+}
