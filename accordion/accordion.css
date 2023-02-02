@@ -1,0 +1,135 @@
+@font-face {
+    font-family:"aktiv-grotesk";
+    src:url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/cbf647/000000000000000077359d61/30/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+    }
+
+
+/*#bgMenuShadowWhite{
+      width: 100%;
+      height: 35%;
+      position: relative;
+      top: 0;
+      background-color: #000000;
+      z-index:1000000;
+    }*/
+    
+    body{    /*background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);*/}
+.accordionWrapper{
+    /* padding:30px; */
+    background:#fff;
+    float:left;
+    width:100%;
+    box-sizing:border-box;
+    /* margin:10%; */
+    /* box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);*/
+} 
+.accordionItem{
+    float:left;
+    display:block;
+    width:100%;
+    box-sizing: border-box;
+    /*font-family:'Open-sans',Arial,sans-serif;*/
+    font-family: "aktiv-grotesk",sans-serif;
+    
+}
+.accordionItemHeading{
+    cursor:pointer;
+   /* border-top:1px solid black ;*/
+   font-family: "aktiv-grotesk",sans-serif;
+    border-bottom:1px solid black ;
+    margin:0px 0px 0px 0px;
+    padding:10px;
+    background:#ffffff;
+    color:#000000;
+    width:100%;
+    /* -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px; */
+        box-sizing: border-box;
+        padding: 30px 0 30px 40px;
+        font-size: 1.5em;
+}
+#firstElementAcordion{
+    border-top: 1px solid black;
+}
+.accordionItemHeading:hover{
+    background-color: #CDDB23;
+    transition: 0.5s all;
+}
+.close .accordionItemContent{
+    height:0px;
+    transition:height 1s ease-out;
+    -webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+    float:left;
+    display:block;
+    
+    
+}
+.open .accordionItemContent{
+    padding: 40px 30px;
+    background-color: #eaf19d;
+    border-bottom:1px solid black ;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    display:block;
+    -webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+    -webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease;
+	-ms-transition: -ms-transform 0.4s ease;
+	transition: transform 0.4s ease;
+        box-sizing: border-box;
+}
+
+.open .accordionItemHeading{
+    margin:0px;
+        -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #CDDB23;
+    color: #000000;
+}
+
+.imgArrowToggle2{
+    width: 15px!important;
+    margin-left: 30px;
+}
+.row .col img {
+    margin-bottom: 0px; 
+
+}
+.linkToggle2Content:hover .imgArrowToggle2{
+    transform: rotate(45deg);
+    transition: 0.5s all;
+}
+.imgPlusToggle2{
+    width: 25px!important;
+    float: right;
+    margin-right: 30px;
+    margin-top: 12px;
+}
+.open .imgPlusToggle2{
+    transform: rotate(45deg);
+    transition: 0.5s all;
+}

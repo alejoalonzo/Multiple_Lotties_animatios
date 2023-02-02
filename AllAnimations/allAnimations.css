@@ -110,13 +110,13 @@
       }
 
       .lottie-trigger, .lottie-trigger2, .lottie-trigger3Pre,.lottie-trigger3,
-      .lottie-trigger5, .lottie-trigger6, 
+      .lottie-trigger5, 
       .lottie-trigger7{
         height: 100vh;
       }
 
-      .lottie-trigger4{
-        height: 120vh;
+      .lottie-trigger4, .lottie-trigger6 {
+        height: 110vh;
       }  
     .buttonsWraps{
       box-sizing: border-box;
@@ -159,12 +159,12 @@
       content:"";
       background-color:#CDDB23;
       width:100%;
-      height:0.85em;
+      height:0.70em;
       position:absolute;
       z-index:-1;
       /*filter:url(#marker-shape);*/
       left:-0.25em;
-      top:0em;
+      top:0.4em;
       padding:0 0.2em;
     }
     .highLighterBlack{
@@ -174,12 +174,12 @@
       content:"";
       background-color:black;
       width:100%;
-      height:0.85em;
+      height:0.70em;
       position:absolute;
       z-index:-1;
       left:-0.25em;
-      top:0em;
-      padding:0 0.1em;
+      top:0.4em;
+      padding:0 0.2em;
     }
     /*-----------------------------------ANIMATION1---*/
     .titleHeroMegaBoltLine1{

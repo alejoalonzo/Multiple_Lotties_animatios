@@ -32,6 +32,7 @@ let animation = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
+  //path: "https://lottie.host/e53b759c-3262-46b9-8d7f-86e5e58a457f/fsMUngiOPD.json",
   path: "https://lottie.host/102ce5ef-2bb0-4e06-a222-569f07c4fbb8/A5JYYo8S1Y.json",
 });
 
@@ -112,6 +113,7 @@ function aniamtionTwo() {
     loop: false,
     autoplay: false,
     path: "https://lottie.host/b0403543-3a59-4d34-8aae-c49fd0a1ad54/VPlZovhDc1.json",
+    //path: "https://assets6.lottiefiles.com/private_files/lf30_oOGQFY.json",
   });
 
   animation2.addEventListener("DOMLoaded", function () {
@@ -123,11 +125,7 @@ function aniamtionTwo() {
           scrub: 1,
           start: "top top",
           end: "+=1550%",
-          /* onEnter: () => buttonAnimation2.classList.add("buttonSelected"),
-          onLeave: () => buttonAnimation2.classList.remove("buttonSelected"),
-          onEnterBack: () => buttonAnimation2.classList.add("buttonSelected"),
-          onLeaveBack: () =>
-            buttonAnimation2.classList.remove("buttonSelected"),*/
+
           onLeave: () => animationThreePre(),
           onUpdate: self => {
             animation2.goToAndStop(
@@ -186,7 +184,7 @@ function animationThreePre() {
           pin: true,
           scrub: true,
           start: "top top",
-          end: "+=150%",
+          end: "+=140%",
           onLeave: () => animationThree(),
           onUpdate: self => {
             preAnimation3.goToAndStop(
@@ -197,7 +195,7 @@ function animationThreePre() {
         },
       })
       .to(".titleHeroAnimation31", 0, { opacity: 1 }, 0)
-      .to(".titleHeroAnimation31", 0.4, { opacity: 0 }, 1)
+      .to(".titleHeroAnimation31", 0.2, { opacity: 0 }, 1)
       .to(
         "#buttonAnimation3",
         0.01,
@@ -228,14 +226,9 @@ function animationThree() {
           scrub: true,
           start: "top top",
           end: "+=1550%",
-          /*onEnter: () => buttonAnimation3.classList.add("buttonSelected"),
-          onLeave: () => buttonAnimation3.classList.remove("buttonSelected"),
-          onEnterBack: () => buttonAnimation3.classList.add("buttonSelected"),
-          onLeaveBack: () =>
-            buttonAnimation3.classList.remove("buttonSelected"),*/
+
           onLeave: () => animationFour(),
           onUpdate: self => {
-            // console.log((self.progress * (animation.totalFrames - 1)).toFixed(0));
             animation3.goToAndStop(
               self.progress * (animation3.totalFrames - 1),
               true
@@ -282,11 +275,7 @@ function animationFour() {
           scrub: true,
           start: "top top",
           end: "+=1550%",
-          /*onEnter: () => buttonAnimation4.classList.add("buttonSelected"),
-          onLeave: () => buttonAnimation4.classList.remove("buttonSelected"),
-          onEnterBack: () => buttonAnimation4.classList.add("buttonSelected"),
-          onLeaveBack: () =>
-            buttonAnimation4.classList.remove("buttonSelected"),*/
+
           onLeave: () => animationFive(),
           onUpdate: self => {
             animation4.goToAndStop(
@@ -344,12 +333,8 @@ function animationFive() {
           scrub: true,
           start: "top top",
           end: "+=1550%",
-          /*onEnter: () => buttonAnimation5.classList.add("buttonSelected"),
-          onLeave: () => buttonAnimation5.classList.remove("buttonSelected"),
-          onEnterBack: () => buttonAnimation5.classList.add("buttonSelected"),
-          onLeaveBack: () =>
-            buttonAnimation5.classList.remove("buttonSelected"),*/
-          onLeave: () => animationSeven(),
+
+          onLeave: () => animationSix(),
           onUpdate: self => {
             animation5.goToAndStop(
               self.progress * (animation5.totalFrames - 1),
@@ -387,6 +372,37 @@ function animationFive() {
   });
 }
 
+//------------------------------------------------Animation6
+function animationSix() {
+  let sectionClass6 = ".lottie-trigger6";
+  let target6 = gsap.utils.toArray(".lottie-trigger6")[0];
+  let animation6 = lottie.loadAnimation({
+    container: target6,
+    renderer: "svg",
+    loop: false,
+    autoplay: false,
+    path: "https://lottie.host/8ddb2526-857e-4b19-be08-ca9521082719/ZlsB8aH0JE.json",
+  });
+
+  animation6.addEventListener("DOMLoaded", function () {
+    let tl6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: target6,
+        pin: true,
+        scrub: true,
+        start: "top top",
+        end: "+=1550%",
+        onLeave: () => animationSeven(),
+        onUpdate: self => {
+          animation6.goToAndStop(
+            self.progress * (animation6.totalFrames - 1),
+            true
+          );
+        },
+      },
+    });
+  });
+}
 //------------------------------------------------Animation7
 function animationSeven() {
   let sectionClass7 = ".lottie-trigger7";
@@ -408,11 +424,7 @@ function animationSeven() {
           scrub: true,
           start: "top top",
           end: "+=1550%",
-          /*onEnter: () => buttonAnimation7.classList.add("buttonSelected"),
-          onLeave: () => buttonAnimation7.classList.remove("buttonSelected"),
-          onEnterBack: () => buttonAnimation7.classList.add("buttonSelected"),
-          onLeaveBack: () =>
-            buttonAnimation7.classList.remove("buttonSelected"),*/
+
           onUpdate: self => {
             animation7.goToAndStop(
               self.progress * (animation7.totalFrames - 1),
