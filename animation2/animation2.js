@@ -1,25 +1,4 @@
-//------------------------------------------------Buttons
-
-let buttonAnimation1 = document.querySelector("#buttonAnimation1");
 let buttonAnimation2 = document.querySelector("#buttonAnimation2");
-let buttonAnimation3 = document.querySelector("#buttonAnimation3");
-let buttonAnimation4 = document.querySelector("#buttonAnimation4");
-let buttonAnimation5 = document.querySelector("#buttonAnimation5");
-let buttonAnimation6 = document.querySelector("#buttonAnimation6");
-let buttonAnimation7 = document.querySelector("#buttonAnimation7");
-
-window.onload = function () {
-  buttonAnimation2.classList.add("buttonSelected");
-};
-
-//------------------------------------------------Helpers Function
-function leaveOnLeft(section) {
-  var leaveToLeft = document.querySelector(section);
-  leaveToLeft.classList.add("leaveToLeftStyles");
-}
-function addClassButtonSelected() {}
-
-//------------------------------------------------Animation 2
 let sectionClass2 = ".lottie-trigger2";
 let target2 = gsap.utils.toArray(".lottie-trigger2")[0];
 let animation2 = lottie.loadAnimation({
@@ -27,7 +6,8 @@ let animation2 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/950c77d6-7061-447e-908f-46803639f7ed/u9CUA4PebH.json",
+  path: "https://lottie.host/b0403543-3a59-4d34-8aae-c49fd0a1ad54/VPlZovhDc1.json",
+  //path: "https://assets6.lottiefiles.com/private_files/lf30_oOGQFY.json",
 });
 
 animation2.addEventListener("DOMLoaded", function () {
@@ -36,7 +16,7 @@ animation2.addEventListener("DOMLoaded", function () {
       scrollTrigger: {
         trigger: target2,
         pin: true,
-        scrub: true,
+        scrub: 1,
         start: "top top",
         end: "+=1550%",
         onEnter: () => buttonAnimation2.classList.add("buttonSelected"),
@@ -52,19 +32,29 @@ animation2.addEventListener("DOMLoaded", function () {
       },
     })
     .to(".titleHeroAnimation21", 0, { opacity: 1 }, 0)
-    .to(".titleHeroAnimation21", 0.01, { opacity: 0 }, 0.04)
-    .to(".animation2textInfoLeft1", 0.01, { opacity: 1 }, 0.05)
-    .to(".animation2textInfoLeft1", 0.01, { opacity: 0 }, 0.12)
-    .to(".animation2textInfoLeft2", 0.01, { opacity: 1 }, 0.05)
-    .to(".animation2textInfoLeft2", 0.01, { opacity: 0 }, 0.12)
-    .to(".animation2textInfoLeft3", 0.04, { opacity: 1 }, 0.14)
-    .to(".animation2textInfoLeft3", 0.04, { opacity: 0 }, 0.2)
-    .to(".animation2textInfoLeft4", 0.04, { opacity: 1 }, 0.24)
+    .to(".titleHeroAnimation21", 0.02, { opacity: 0 }, 0.12)
+    .to(".animation2textInfoLeft1", 0.01, { opacity: 1 }, 0.13)
+    .to(".animation2textInfoLeft1", 0.01, { opacity: 0 }, 0.16)
+    .to(".animation2textInfoLeft2", 0.01, { opacity: 1 }, 0.13)
+    .to(".animation2textInfoLeft2", 0.01, { opacity: 0 }, 0.16)
+    .to(".animation2textInfoLeft3", 0.04, { opacity: 1 }, 0.18)
+    .to(".animation2textInfoLeft3", 0.04, { opacity: 0 }, 0.24)
+    .to(".animation2textInfoLeft4", 0.04, { opacity: 1 }, 0.28)
     .to(".animation2textInfoLeft4", 0.04, { opacity: 0 }, 0.5)
-    .to(".animation2textInfoLeft5", 0.04, { opacity: 1 }, 0.35)
-    .to(".animation2textInfoLeft5", 0.04, { opacity: 0 }, 0.5)
+    // .to(".animation2textInfoLeft5", 0.04, { opacity: 1 }, 0.35)
+    // .to(".animation2textInfoLeft5", 0.04, { opacity: 0 }, 0.5)
     .to(".animation2textInfoLeft6", 0.04, { opacity: 1 }, 0.43)
-    .to(".animation2textInfoLeft6", 0.04, { opacity: 0 }, 0.5);
+    .to(".animation2textInfoLeft6", 0.02, { opacity: 0 }, 0.5)
+    .to(
+      "#buttonAnimation2",
+      0.01,
+      { backgroundColor: "#000000", color: "#ffffff" },
+      0
+    )
+    .to(
+      "#buttonAnimation2",
+      0.01,
+      { backgroundColor: "#ffffff", color: "#000000" },
+      0.5
+    );
 });
-// var frameInitAnimation = animation2.goToAndStop(5, true);
-// return frameInitAnimation;

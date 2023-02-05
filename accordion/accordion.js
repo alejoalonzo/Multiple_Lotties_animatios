@@ -1,4 +1,4 @@
-var accItem = document.getElementsByClassName("accordionItem");
+/*var accItem = document.getElementsByClassName("accordionItem");
 var accHD = document.getElementsByClassName("accordionItemHeading");
 for (i = 0; i < accHD.length; i++) {
   accHD[i].addEventListener("click", toggleItem, false);
@@ -11,4 +11,11 @@ function toggleItem() {
   if (itemClass == "accordionItem close") {
     this.parentNode.className = "accordionItem open";
   }
-}
+}*/
+
+let flag = false;
+
+document.getElementById("myButton").addEventListener("click", function () {
+  flag = !flag;
+  this.innerHTML = flag ? "CLOSE" : "MENU";
+});

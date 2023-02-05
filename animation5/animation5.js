@@ -1,19 +1,4 @@
-//------------------------------------------------Buttons
-
-let buttonAnimation1 = document.querySelector("#buttonAnimation1");
-let buttonAnimation2 = document.querySelector("#buttonAnimation2");
-let buttonAnimation3 = document.querySelector("#buttonAnimation3");
-let buttonAnimation4 = document.querySelector("#buttonAnimation4");
 let buttonAnimation5 = document.querySelector("#buttonAnimation5");
-let buttonAnimation6 = document.querySelector("#buttonAnimation6");
-let buttonAnimation7 = document.querySelector("#buttonAnimation7");
-
-window.onload = function () {
-  buttonAnimation5.classList.add("buttonSelected");
-};
-
-//------------------------------------------------Animation 5
-
 let sectionClass5 = ".lottie-trigger5";
 let target5 = gsap.utils.toArray(".lottie-trigger5")[0];
 let animation5 = lottie.loadAnimation({
@@ -21,7 +6,7 @@ let animation5 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/3670397c-ca90-4244-8fc9-4e460f341a22/p033NgjldR.json",
+  path: "https://lottie.host/214d54aa-560b-47d9-bd5b-56f0028a6117/GElQeHBaA1.json",
 });
 
 animation5.addEventListener("DOMLoaded", function () {
@@ -58,5 +43,17 @@ animation5.addEventListener("DOMLoaded", function () {
     .to(".animation5textInfoRight4", 0.01, { opacity: 1 }, 0.25)
     .to(".animation5textInfoRight4", 0.01, { opacity: 0 }, 0.3)
     .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 1 }, 0.35)
-    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 0 }, 0.4);
+    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 0 }, 0.4)
+    .to(
+      "#buttonAnimation5",
+      0.01,
+      { backgroundColor: "#000000", color: "#ffffff" },
+      0
+    )
+    .to(
+      "#buttonAnimation5",
+      0.01,
+      { backgroundColor: "#ffffff", color: "#000000" },
+      0.4
+    );
 });

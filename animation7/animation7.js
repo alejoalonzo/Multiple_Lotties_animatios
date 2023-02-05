@@ -1,18 +1,4 @@
-//------------------------------------------------Buttons
-
-let buttonAnimation1 = document.querySelector("#buttonAnimation1");
-let buttonAnimation2 = document.querySelector("#buttonAnimation2");
-let buttonAnimation3 = document.querySelector("#buttonAnimation3");
-let buttonAnimation4 = document.querySelector("#buttonAnimation4");
-let buttonAnimation5 = document.querySelector("#buttonAnimation5");
-let buttonAnimation6 = document.querySelector("#buttonAnimation6");
 let buttonAnimation7 = document.querySelector("#buttonAnimation7");
-
-window.onload = function () {
-  buttonAnimation7.classList.add("buttonSelected");
-};
-
-//------------------------------------------------Animation 7
 let sectionClass7 = ".lottie-trigger7";
 let target7 = gsap.utils.toArray(".lottie-trigger7")[0];
 let animation7 = lottie.loadAnimation({
@@ -20,7 +6,7 @@ let animation7 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/ac27ef06-951b-4a87-b9fc-44ddbdcf197a/GgEZ4UwyUk.json",
+  path: "https://lottie.host/3b4d3d33-fc31-4b16-9774-304142cf04a9/11uuAFfeeW.json",
 });
 
 animation7.addEventListener("DOMLoaded", function () {

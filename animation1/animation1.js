@@ -1,18 +1,4 @@
-//------------------------------------------------Buttons
-let buttonAnimation1 = document.querySelector("#buttonAnimation1");
-let buttonAnimation2 = document.querySelector("#buttonAnimation2");
-let buttonAnimation3 = document.querySelector("#buttonAnimation3");
-let buttonAnimation4 = document.querySelector("#buttonAnimation4");
-let buttonAnimation5 = document.querySelector("#buttonAnimation5");
-let buttonAnimation6 = document.querySelector("#buttonAnimation6");
-let buttonAnimation7 = document.querySelector("#buttonAnimation7");
-
-//------------------------------------------------Helpers Function
-function leaveOnLeft(section) {
-  var leaveToLeft = document.querySelector(section);
-  leaveToLeft.classList.add("leaveToLeftStyles");
-}
-function addClassButtonSelected() {}
+var buttonAnimation1 = document.querySelector("#buttonAnimation1");
 //------------------------------------------------Animation 1
 let sectionClass = ".lottie-trigger";
 let target = gsap.utils.toArray(".lottie-trigger")[0];
@@ -21,7 +7,8 @@ let animation = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/e53b759c-3262-46b9-8d7f-86e5e58a457f/fsMUngiOPD.json",
+  //path: "https://lottie.host/e53b759c-3262-46b9-8d7f-86e5e58a457f/fsMUngiOPD.json",
+  path: "https://lottie.host/102ce5ef-2bb0-4e06-a222-569f07c4fbb8/A5JYYo8S1Y.json",
 });
 
 animation.addEventListener("DOMLoaded", function () {
@@ -30,7 +17,7 @@ animation.addEventListener("DOMLoaded", function () {
       scrollTrigger: {
         trigger: target,
         pin: true,
-        scrub: true,
+        scrub: 10,
         start: "top top",
         end: "+=2750%",
         onEnter: () => buttonAnimation1.classList.add("buttonSelected"),
@@ -60,7 +47,5 @@ animation.addEventListener("DOMLoaded", function () {
     .to(".animation1textInfoLeft3", 0.04, { opacity: 1 }, 1.3)
     .to(".animation1textInfoLeft3", 0.04, { opacity: 0 }, 2) //1.5
     .to(".animation1textInfoLeft4", 0.04, { opacity: 1 }, 1.55)
-    .to(".animation1textInfoLeft4", 0.04, { opacity: 0 }, 2);
-
-  // tl.fromTo(".text2", { y: 200 }, { y: -300, duration: 1 }, 2);
+    .to(".animation1textInfoLeft4", 0.01, { opacity: 0 }, 2);
 });

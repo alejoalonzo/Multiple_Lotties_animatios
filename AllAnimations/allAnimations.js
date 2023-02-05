@@ -24,6 +24,10 @@ let sectionLottie5 = document.querySelector(".lottie-trigger5");
 let sectionLottie6 = document.querySelector(".lottie-trigger6");
 let sectionLottie7 = document.querySelector(".lottie-trigger7");
 
+buttonAnimation7.addEventListener("click", () => {
+  aniamtionTwo();
+});
+
 //------------------------------------------------Animation 1
 let sectionClass = ".lottie-trigger";
 let target = gsap.utils.toArray(".lottie-trigger")[0];
@@ -45,10 +49,10 @@ animation.addEventListener("DOMLoaded", function () {
         scrub: 10,
         start: "top top",
         end: "+=2750%",
-        /*onEnter: () => buttonAnimation1.classList.add("buttonSelected"),
+        onEnter: () => buttonAnimation1.classList.add("buttonSelected"),
         onLeave: () => buttonAnimation1.classList.remove("buttonSelected"),
         onEnterBack: () => buttonAnimation1.classList.add("buttonSelected"),
-        onLeaveBack: () => buttonAnimation1.classList.remove("buttonSelected"),*/
+        onLeaveBack: () => buttonAnimation1.classList.remove("buttonSelected"),
 
         onLeave: () => aniamtionTwo(),
         onUpdate: self => {
@@ -125,7 +129,11 @@ function aniamtionTwo() {
           scrub: 1,
           start: "top top",
           end: "+=1550%",
-
+          onEnter: () => buttonAnimation2.classList.add("buttonSelected"),
+          onLeave: () => buttonAnimation2.classList.remove("buttonSelected"),
+          onEnterBack: () => buttonAnimation2.classList.add("buttonSelected"),
+          onLeaveBack: () =>
+            buttonAnimation2.classList.remove("buttonSelected"),
           onLeave: () => animationThreePre(),
           onUpdate: self => {
             animation2.goToAndStop(
