@@ -1,16 +1,12 @@
 //------------------------------------------------Buttons
 let buttonAnimation4 = document.querySelector("#buttonAnimation4");
-
-// window.onload = function () {
-//   buttonAnimation4.classList.add("buttonSelected");
-// };  let sectionClass4 = ".lottie-trigger4";
 let target4 = gsap.utils.toArray(".lottie-trigger4")[0];
 let animation4 = lottie.loadAnimation({
   container: target4,
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/394b75d6-bc64-4149-a365-15a528c43c99/uhbguTVrrj.json",
+  path: "https://lottie.host/76174e05-749e-4fc4-a0d7-488b51dd5e15/Lo3BTd9PsT.json",
 });
 
 animation4.addEventListener("DOMLoaded", function () {
@@ -35,27 +31,15 @@ animation4.addEventListener("DOMLoaded", function () {
       },
     })
     .to(".titleHeroAnimation41", 0, { opacity: 1 }, 0)
-    .to(".titleHeroAnimation41", 0.01, { opacity: 0 }, 0.04)
+    .to(".titleHeroAnimation41", 0.01, { opacity: 0 }, 0.06)
     .to(".titleHeroAnimation42", 0.01, { opacity: 1 }, 0.002)
-    .to(".titleHeroAnimation42", 0.01, { opacity: 0 }, 0.04)
-    .to(".animation4textInfoCenter1", 0.01, { opacity: 1 }, 0.05)
-    .to(".animation4textInfoCenter1", 0.01, { opacity: 0 }, 0.1)
-    .to(".animation4textInfoCenter2", 0.01, { opacity: 1 }, 0.12)
-    .to(".animation4textInfoCenter2", 0.01, { opacity: 0 }, 0.16)
+    .to(".titleHeroAnimation42", 0.01, { opacity: 0 }, 0.06)
+    .to(".animation4textInfoCenter1", 0.01, { opacity: 1 }, 0.07)
+    .to(".animation4textInfoCenter1", 0.01, { opacity: 0 }, 0.12)
+    .to(".animation4textInfoCenter2", 0.01, { opacity: 1 }, 0.14)
+    .to(".animation4textInfoCenter2", 0.01, { opacity: 0 }, 0.17)
     .to(".animation4textInfoCenter3", 0.01, { opacity: 1 }, 0.2)
     .to(".animation4textInfoCenter3", 0.01, { opacity: 0 }, 0.26)
     .to(".animation4textInfoCenter4", 0.01, { opacity: 1 }, 0.3)
-    .to(".animation4textInfoCenter4", 0.01, { opacity: 0 }, 0.4)
-    .to(
-      "#buttonAnimation4",
-      0.01,
-      { backgroundColor: "#000000", color: "#ffffff" },
-      0
-    )
-    .to(
-      "#buttonAnimation4",
-      0.01,
-      { backgroundColor: "#ffffff", color: "#000000" },
-      0.4
-    );
+    .to(".animation4textInfoCenter4", 0.01, { opacity: 0 }, 0.4);
 });

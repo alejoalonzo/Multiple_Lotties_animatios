@@ -6,7 +6,7 @@ let animation5 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/214d54aa-560b-47d9-bd5b-56f0028a6117/GElQeHBaA1.json",
+  path: "https://lottie.host/7a152602-0b22-4c5b-a84e-ae396466f8c5/20RjlQYbpW.json",
 });
 
 animation5.addEventListener("DOMLoaded", function () {
@@ -42,18 +42,6 @@ animation5.addEventListener("DOMLoaded", function () {
     .to(".animation5textInfoRight3", 0.01, { opacity: 0 }, 0.3)
     .to(".animation5textInfoRight4", 0.01, { opacity: 1 }, 0.25)
     .to(".animation5textInfoRight4", 0.01, { opacity: 0 }, 0.3)
-    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 1 }, 0.35)
-    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 0 }, 0.4)
-    .to(
-      "#buttonAnimation5",
-      0.01,
-      { backgroundColor: "#000000", color: "#ffffff" },
-      0
-    )
-    .to(
-      "#buttonAnimation5",
-      0.01,
-      { backgroundColor: "#ffffff", color: "#000000" },
-      0.4
-    );
+    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 1 }, 0.36)
+    .to(".titleHeroAnimationYellowBox", 0.01, { opacity: 0 }, 0.4);
 });

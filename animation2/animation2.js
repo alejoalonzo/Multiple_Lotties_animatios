@@ -6,8 +6,7 @@ let animation2 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/b0403543-3a59-4d34-8aae-c49fd0a1ad54/VPlZovhDc1.json",
-  //path: "https://assets6.lottiefiles.com/private_files/lf30_oOGQFY.json",
+  path: "https://lottie.host/9ddf6772-1387-4591-8c79-008c7a285850/91juubEoFs.json",
 });
 
 animation2.addEventListener("DOMLoaded", function () {

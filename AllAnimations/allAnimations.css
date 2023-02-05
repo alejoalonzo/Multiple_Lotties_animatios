@@ -111,7 +111,7 @@
 
       .lottie-trigger, .lottie-trigger2, .lottie-trigger3Pre,.lottie-trigger3,
       .lottie-trigger5, 
-      .lottie-trigger7{
+      .lottie-trigger7, .lottie-triggerFinal{
         height: 100vh;
       }
 
@@ -127,7 +127,7 @@
       left: 30px; 
       z-index: 100;
     }
-    .buttonsAnimations{
+    .buttonsAnimations,.buttonBackToTop{
         font-family: "aktiv-grotesk",sans-serif;
         border: 1px solid black;
         color: black;
@@ -137,20 +137,26 @@
         font-size: 15px;
     }
     .buttonBackToTop{
-      padding: 10px 20px 10px 20px !important;
-      opacity: 0;
-    }
+      opacity: 1;
+      margin: 0;
+      margin-top: 825px;
+    } 
     .buttonsLI{
       margin-top: 15px;
     }
     .buttonsAnimations:hover, .buttonsAnimations:active{
       background-color: #000000;
-      color: #fff;
+      color: #ffffff;
+      transition: all 350ms;
+    }
+    .buttonBackToTop:hover{
+      background-color: #000000;
+      color: #ffffff;
       transition: all 350ms;
     }
     .buttonSelected{
       background-color: #000000;
-      color: #fff;
+      color: #ffffff;
     }
     .highLighter{
       position:relative;
@@ -350,6 +356,9 @@
         margin-top: 30px;
       }
       .space20{
+        margin-top: 20px;
+      }
+      .space30{
         margin-top: 20px;
       }
       .spaceTitleHeroSecondLine{
@@ -604,4 +613,7 @@
       .marginTopLine4Tille{
         margin-top: 350px;
       }
+      .buttonBackToTop{
+        margin-top: 675px;
+      } 
 }

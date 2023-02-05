@@ -6,7 +6,7 @@ let animation7 = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/3b4d3d33-fc31-4b16-9774-304142cf04a9/11uuAFfeeW.json",
+  path: "https://lottie.host/6e69c236-2b5b-4b24-9a32-5700b297ad1c/GW2xRw4z2h.json",
 });
 
 animation7.addEventListener("DOMLoaded", function () {
@@ -32,10 +32,10 @@ animation7.addEventListener("DOMLoaded", function () {
     })
     .to(".titleHeroAnimation71", 0, { opacity: 1 }, 0)
     .to(".titleHeroAnimation71", 0.01, { opacity: 0 }, 0.03)
-    .to(".animation7textInfoCenter1", 0, { opacity: 1 }, 0.04)
-    .to(".animation7textInfoCenter1", 0.01, { opacity: 0 }, 0.19)
+    .to(".animation7textInfoCenter1", 0, { opacity: 1 }, 0.06)
+    .to(".animation7textInfoCenter1", 0.01, { opacity: 0 }, 0.25)
     .to(".animation7textInfoCenter2", 0, { opacity: 1 }, 0.1)
-    .to(".animation7textInfoCenter2", 0.01, { opacity: 0 }, 0.19)
+    .to(".animation7textInfoCenter2", 0.01, { opacity: 0 }, 0.25)
     .to(".animation7textInfoRight1", 0, { opacity: 1 }, 0.31)
     .to(".animation7textInfoRight1", 0.01, { opacity: 0 }, 0.4)
     .to(".animation7textInfoRight2", 0, { opacity: 1 }, 0.42)
@@ -43,17 +43,5 @@ animation7.addEventListener("DOMLoaded", function () {
     .to(".animation7textInfoRight3", 0, { opacity: 1 }, 0.47)
     .to(".animation7textInfoRight3", 0.01, { opacity: 0 }, 0.75)
     .to(".animation7textInfoRight4", 0, { opacity: 1 }, 0.52)
-    .to(".animation7textInfoRight4", 0.01, { opacity: 0 }, 0.75)
-    .to(".titleHeroAnimation72", 0, { opacity: 1 }, 0.84)
-    .to(".titleHeroAnimation72", 0.01, { opacity: 0 }, 0.94)
-    .to(".titleHeroAnimation73", 0, { opacity: 1 }, 0.86)
-    .to(".titleHeroAnimation73", 0.01, { opacity: 0 }, 0.94)
-    .to(".titleHeroAnimation74", 0, { opacity: 1 }, 0.88)
-    .to(".titleHeroAnimation74", 0.01, { opacity: 0 }, 0.94)
-    .to(".titleHeroAnimation75", 0, { opacity: 1 }, 0.9)
-    .to(".titleHeroAnimation75", 0.01, { opacity: 0 }, 0.94)
-    .to(".titleHeroAnimation76", 0, { opacity: 1 }, 0.92)
-    .to(".titleHeroAnimation76", 0.01, { opacity: 0 }, 0.94);
-  // .to(".buttonBackToTopAnimation", 0, { opacity: 1 }, 0.82)
-  // .to(".buttonBackToTopAnimation", 0.01, { opacity: 0 }, 0.85);
+    .to(".animation7textInfoRight4", 0.01, { opacity: 0 }, 0.75);
 });
