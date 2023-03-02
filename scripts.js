@@ -434,3 +434,74 @@ gsap.to(sections, {
 });*/
 
 /**********************************VERSION WITH FUNCTIOS**/
+//https:/
+//http://alejandroalonzo.com/
+//https://panoramacomunidad.es/
+
+//CHANGE NAME--------------------------------------------------------------------
+// Get the current URL of the page
+/*
+var currentUrl = window.location.href;
+ console.log(currentUrl);
+
+// Use a switch statement to set the page name based on the URL
+var pageName = "";
+switch (currentUrl) {
+  case "https:/about-us/":
+   console.log("Setting page name to About Us");
+ pageName = "About Us";
+
+    break;
+  case "https:/contact-us/":
+    pageName = "Contact Us";
+    break;
+  // Add more cases for each page on your site
+  default:
+console.log("Setting page name to Home");
+    pageName = "Home";
+}
+
+// Set the text of the div element with class "nectar-header-text-content"
+var element = document.querySelector(".nectar-header-text-content > div");
+if (element) {
+  element.innerText = pageName;
+}
+console.log("JavaScript code is being executed!");*/
+
+/*Change label MENU>CLOSE--*/
+jQuery(document).ready(function ($) {
+  $(".buttons.sf-menu .slide-out-widget-area-toggle a").click(function () {
+    var label = $(this).find(".label");
+    var header = $("#header-outer");
+    let headerText = document.querySelector(
+      '#header-outer[data-format="default"] .nectar-header-text-content'
+    );
+    let NavBarWhiteToDark = document.querySelector("#header-outer");
+
+    if ($(this).hasClass("open")) {
+      label.text("MENU");
+      header.addClass("shadowInMegaMenu");
+      // Show the scrollbar
+      $("body").css({ "overflow-y": "hidden" });
+      NavBarWhiteToDark.style.backgroundColor = "white";
+      NavBarWhiteToDark.style.boxShadow = "0 45px 45px rgb(255 255 255)";
+    } else {
+      label.text("CLOSE");
+      header.removeClass("shadowInMegaMenu");
+      headerText.style.display = "none";
+      NavBarWhiteToDark.style.backgroundColor = "black";
+      NavBarWhiteToDark.style.boxShadow = "0 0px 0px transparent";
+      NavBarWhiteToDark.style.setProperty(
+        "box-shadow",
+        "0 0px 0px transparent",
+        "important"
+      );
+
+      // Reload the page when the user clicks the "CLOSE" button
+      $(this).one("click", function (event) {
+        event.preventDefault();
+        location.reload();
+      });
+    }
+  });
+});

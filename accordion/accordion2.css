@@ -4,28 +4,20 @@
     font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
     }
 
-
-/*#bgMenuShadowWhite{
-      width: 100%;
-      height: 35%;
-      position: relative;
-      top: 0;
-      background-color: #000000;
-      z-index:1000000;
-    }*/
-    
-    body{    /*background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);*/}
+.containerContinueExploring{
+    display: flex;
+    justify-content: center;
+}
 .accordionWrapper{
     /* padding:30px; */
     background:#fff;
     float:left;
-    width:100%;
+    width:80%;
     box-sizing:border-box;
     /* margin:10%; */
     /* box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);*/
 } 
-.accordionItem{
+.accordionItem2{
     float:left;
     display:block;
     width:100%;
@@ -34,7 +26,7 @@
     font-family: "aktiv-grotesk",sans-serif;
     
 }
-.accordionItemHeading{
+.accordionItemHeading2{
     cursor:pointer;
    /* border-top:1px solid black ;*/
    font-family: "aktiv-grotesk",sans-serif;
@@ -49,17 +41,13 @@
 border-radius: 3px; */
         box-sizing: border-box;
         padding: 30px 0 30px 40px;
-        font-size: 1.5em;
-        display: flex;
-        align-items: center;
+        font-size: 2.2em;
+        font-weight: bold;
 }
 #firstElementAcordion{
     border-top: 1px solid black;
 }
-.accordionItemHeading:hover{
-    background-color: #CDDB23;
-    transition: 0.5s all;
-}
+
 .close .accordionItemContent{
     height:0px;
     transition:height 1s ease-out;
@@ -150,23 +138,34 @@ ul li {
 .subMenu {
     padding: 40px;
     border-bottom: 1px solid black;
+    background-color: #eaf19d;
+    font-size: 1.8em;
+    font-weight: bold;
 }
 .lastItem{
     border-bottom: none!important
 }
-
+a{
+    text-decoration: none;
+    color: #000000;
+}
 /* MENU MOBILE----------------------------------------------------------------*/
 @media (max-width: 767px){
-    .accordionItemHeading{
-        font-size: 1em;
-        padding: 30px 0px 30px 10px;
-        display: flex;
-        align-items: center;
+    .accordionWrapper{
+        width: 100%;
     }
-    .imgPlusToggle2 {
-        width: 25px!important;
-        float: right;
-        margin-right: 10px;
-        margin-top: 0px;
+    .accordionItemHeading2{
+        font-size: 1.2em;
+        padding: 29px 0 30px 10px;
+    }
+    .subMenu{
+        font-size: 1em;
+        padding-left: 10px;
+    }
+    .imgArrowToggle2{
+        margin-left: 20px;
+    }
+    .textSubMenu{
+        padding-right: 20px;
     }
 }

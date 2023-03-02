@@ -38,12 +38,5 @@ animation3.addEventListener("DOMLoaded", function () {
     .to(".animation3textInfoRight2", 0.01, { opacity: 1 }, 0.14)
     .to(".animation3textInfoRight2", 0.01, { opacity: 0 }, 0.2)
     .to(".animation3textInfoRight3", 0.04, { opacity: 1 }, 0.24)
-    .to(".animation3textInfoRight3", 0.01, { opacity: 0 }, 0.5)
-
-    .to(
-      "#buttonAnimation3",
-      0.01,
-      { backgroundColor: "#ffffff", color: "#000000" },
-      0.5
-    );
+    .to(".animation3textInfoRight3", 0.01, { opacity: 0 }, 0.5);
 });

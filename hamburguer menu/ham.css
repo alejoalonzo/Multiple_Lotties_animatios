@@ -1,0 +1,72 @@
+.menu-icon__bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: black;
+    border-radius: 2px;
+  }
+  @media (min-width: 768px) {
+    .menu-icon {
+      display: none;
+    }
+    .menu-text {
+      display: inline-block;
+    }
+  }
+
+
+
+  @media (max-width: 767px){
+          /* Hide the "Menu" text */
+          body #header-outer[data-has-menu][data-format][data-padding] #top .slide-out-widget-area-toggle[data-custom-color="true"] a i.label {
+            display: none;
+          }
+
+          .slide-out-widget-area-toggle a:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            border-radius: 2px;
+          }
+        
+          /* Rotate and position the lines to create the hamburger icon */
+          #header-outer .slide-out-widget-area-toggle a:before,
+          #header-outer .slide-out-widget-area-toggle a:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            border-radius: 2px;
+          }
+        
+          .slide-out-widget-area-toggle a:before {
+            transform-origin: center;
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+        
+          .slide-out-widget-area-toggle a:after {
+            margin-top: 5px;
+            transform-origin: center;
+            margin-left: 8px;
+            transform: translate(-50%, -50%) rotate(0deg)!important;
+          }
+          #header-outer:not([data-format=centered-menu-under-logo]):not([data-format=centered-menu-bottom-bar]) #top .slide-out-widget-area-toggle[data-custom-color=true] a:before {
+
+            border: 1px solid black!important;
+            background: white!important;
+            width: 30px!important;
+        }
+
+
+
+}

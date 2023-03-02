@@ -1,30 +1,47 @@
-/*var buttonAnimation1 = document.querySelector("#buttonAnimation1");
-var buttonAnimation2 = document.querySelector("#buttonAnimation2");
-let animation1Container = document.querySelector("#section1");
-let animation2Container = document.querySelector("#section2");
+window.onload = function () {
+  var arrowBlackBackToTop = document.getElementById("arrowBlackBackToTop");
+  var backToTopText = document.getElementById("backToTheTopText");
+  var buttonMORE = document.getElementById("buttonMORE");
 
-const targetY = 19690;
-
-buttonAnimation2.addEventListener("click", function () {
-  const currentY = window.scrollY;
-  const distance = Math.abs(targetY - currentY);
-
-  if (currentY > targetY) {
-    window.scrollTo(0, currentY - distance);
+  if (arrowBlackBackToTop && backToTopText) {
+    window.addEventListener("resize", function () {
+      if (window.innerWidth <= 767) {
+        backToTopText.style.display = "none";
+        arrowBlackBackToTop.style.display = "block";
+        buttonMORE.style.display = "block";
+      } else {
+        arrowBlackBackToTop.style.display = "none";
+        backToTopText.innerHTML = "BACK TO THE TOP";
+      }
+    });
   } else {
-    window.scrollTo(0, currentY + distance);
+    console.error(
+      "One or both elements with the specified ids were not found on the page."
+    );
   }
-  window.scrollTo(0, targetY);
-});*/
+};
+
 //------------------------------------------------Animation 1
 let sectionClass = ".lottie-trigger";
 let target = gsap.utils.toArray(".lottie-trigger")[0];
+
+let animation1Path;
+
+// check if the screen size is shorter
+if (window.innerWidth < 767) {
+  animation1Path =
+    "https://lottie.host/1278dd86-09cd-49f3-9ee3-8f9b3661f7e0/fNRd2g3Vje.json";
+} else {
+  animation1Path =
+    "https://lottie.host/bf18689a-d055-408a-8d8a-cdf340495b9c/sEAkTVD34j.json";
+}
+
 let animation = lottie.loadAnimation({
   container: target,
   renderer: "svg",
   loop: false,
   autoplay: false,
-  path: "https://lottie.host/bf18689a-d055-408a-8d8a-cdf340495b9c/sEAkTVD34j.json",
+  path: animation1Path,
 });
 
 animation.addEventListener("DOMLoaded", function () {
@@ -67,24 +84,26 @@ animation.addEventListener("DOMLoaded", function () {
 });
 function animationTwo() {
   //------------------------------------------------Animation 2
-  // get the scroll position
-  let scrollPosition = window.scrollY;
 
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-  let element = document.querySelector("#Yposition");
-  let elementYPosition = element.offsetTop;
-  console.log(elementYPosition);
-
+  let buttonAnimation2 = document.querySelector("#buttonAnimation2");
+  let sectionClass2 = ".lottie-trigger2";
   let target2 = gsap.utils.toArray(".lottie-trigger2")[0];
+
+  let animation2Path;
+  if (window.innerWidth < 767) {
+    animation2Path =
+      "https://lottie.host/9c6303cd-d149-4b5c-b226-7719262e62a5/ZOqG4daGwx.json";
+  } else {
+    animation2Path =
+      "https://lottie.host/9ddf6772-1387-4591-8c79-008c7a285850/91juubEoFs.json";
+  }
+
   let animation2 = lottie.loadAnimation({
     container: target2,
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "https://lottie.host/9ddf6772-1387-4591-8c79-008c7a285850/91juubEoFs.json",
+    path: animation2Path,
   });
 
   animation2.addEventListener("DOMLoaded", function () {
@@ -128,24 +147,25 @@ function animationTwo() {
 
 function animationThee() {
   //------------------------------------------------Animation 3
-
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-
   let buttonAnimation3 = document.querySelector("#buttonAnimation3");
   let sectionClass3 = ".lottie-trigger3";
   let target3 = gsap.utils.toArray(".lottie-trigger3")[0];
+
+  let animation3Path;
+  if (window.innerWidth < 767) {
+    animation3Path =
+      "https://lottie.host/bf28f96b-60c9-4b4c-bdeb-dbc7297896b0/FMJXB1RKYX.json";
+  } else {
+    animation3Path =
+      "https://lottie.host/d4781568-f5f5-4c1f-aa78-946bef25bbdc/wpgg7IMIjY.json";
+  }
+
   let animation3 = lottie.loadAnimation({
     container: target3,
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "https://lottie.host/d4781568-f5f5-4c1f-aa78-946bef25bbdc/wpgg7IMIjY.json",
+    path: animation3Path,
   });
 
   animation3.addEventListener("DOMLoaded", function () {
@@ -187,22 +207,25 @@ function animationThee() {
 }
 
 function animationFour() {
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
   //------------------------------------------------animation4
   let buttonAnimation4 = document.querySelector("#buttonAnimation4");
   let target4 = gsap.utils.toArray(".lottie-trigger4")[0];
+
+  let animation4Path;
+  if (window.innerWidth < 767) {
+    animation4Path =
+      "https://lottie.host/e21cf087-df60-4879-a288-be479d838b9e/wVfJlUx7HW.json";
+  } else {
+    animation4Path =
+      "https://lottie.host/76174e05-749e-4fc4-a0d7-488b51dd5e15/Lo3BTd9PsT.json";
+  }
+
   let animation4 = lottie.loadAnimation({
     container: target4,
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "https://lottie.host/76174e05-749e-4fc4-a0d7-488b51dd5e15/Lo3BTd9PsT.json",
+    path: animation4Path,
   });
 
   animation4.addEventListener("DOMLoaded", function () {
@@ -244,24 +267,26 @@ function animationFour() {
 }
 
 function animationFive() {
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-
   //------------------------------------------------animation5
   let buttonAnimation5 = document.querySelector("#buttonAnimation5");
   let sectionClass5 = ".lottie-trigger5";
   let target5 = gsap.utils.toArray(".lottie-trigger5")[0];
+
+  let animation5Path;
+  if (window.innerWidth < 767) {
+    animation5Path =
+      "https://lottie.host/fb2dca69-573d-4d64-861e-2270b828d5f6/AJZTEkwdoM.json";
+  } else {
+    animation5Path =
+      "https://lottie.host/7a152602-0b22-4c5b-a84e-ae396466f8c5/20RjlQYbpW.json";
+  }
+
   let animation5 = lottie.loadAnimation({
     container: target5,
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "https://lottie.host/7a152602-0b22-4c5b-a84e-ae396466f8c5/20RjlQYbpW.json",
+    path: animation5Path,
   });
 
   animation5.addEventListener("DOMLoaded", function () {
@@ -305,14 +330,6 @@ function animationFive() {
 }
 //------------------------------------------------animation6
 function animationSix() {
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-
   let buttonAnimation6 = document.querySelector("#buttonAnimation6");
   let sectionClass6 = ".lottie-trigger6";
   let target6 = gsap.utils.toArray(".lottie-trigger6")[0];
@@ -361,24 +378,26 @@ function animationSix() {
 }
 
 function animationSeven() {
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-
   //------------------------------------------------animation7
   let buttonAnimation7 = document.querySelector("#buttonAnimation7");
   let sectionClass7 = ".lottie-trigger7";
   let target7 = gsap.utils.toArray(".lottie-trigger7")[0];
+
+  let animation7Path;
+  if (window.innerWidth < 767) {
+    animation7Path =
+      "https://lottie.host/888de38d-f270-469d-a7ac-71eab364fb62/asR2Sll3zb.json";
+  } else {
+    animation7Path =
+      "https://lottie.host/6e69c236-2b5b-4b24-9a32-5700b297ad1c/GW2xRw4z2h.json";
+  }
+
   let animation7 = lottie.loadAnimation({
     container: target7,
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "https://lottie.host/6e69c236-2b5b-4b24-9a32-5700b297ad1c/GW2xRw4z2h.json",
+    path: animation7Path,
   });
 
   animation7.addEventListener("DOMLoaded", function () {
@@ -422,14 +441,6 @@ function animationSeven() {
 }
 
 function animationFinal() {
-  // get the scroll position
-  let scrollPosition = window.scrollY;
-
-  // or
-  // let scrollPosition = window.pageYOffset;
-
-  console.log(scrollPosition);
-
   //------------------------------------------------final
   let buttonBackToTop = document.querySelector("#buttonBackToTop");
   let targetFinal = gsap.utils.toArray(".lottie-triggerFinal")[0];
@@ -470,5 +481,48 @@ function animationFinal() {
       .to(".titleHeroAnimation76", 0.02, { opacity: 0 }, 2)
       .to(".buttonBackToTopAnimation", 0, { opacity: 1 }, 1.6)
       .to(".buttonBackToTopAnimation", 0.02, { opacity: 0 }, 2);
+  });
+}
+
+//----------Anchor click Scroll animation
+let sections = document.querySelectorAll("section");
+
+let anchors = document.querySelectorAll(".buttonsAnimations");
+
+anchors.forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+    changeIndicator(anchor);
+  });
+});
+
+window.addEventListener("scroll", event => {
+  sections.forEach((section, index) => {
+    if (inOut(section)) {
+      changeIndicator(anchors[index]);
+    }
+  });
+});
+
+function inOut(e) {
+  var bounding = e.getBoundingClientRect();
+  var top = Math.round(bounding.top);
+  var bottom = Math.round(bounding.bottom);
+  var visiblePart = window.innerHeight || document.documentElement.clientWidth;
+  return bottom > 0 && bottom <= visiblePart && top >= 0;
+}
+
+function changeIndicator(nail) {
+  anchors.forEach(anc => {
+    if (anc.id == nail.id) {
+      anc.style.backgroundColor = "black";
+      anc.style.color = "white";
+    } else {
+      anc.style.backgroundColor = "White";
+      anc.style.color = "black";
+    }
   });
 }

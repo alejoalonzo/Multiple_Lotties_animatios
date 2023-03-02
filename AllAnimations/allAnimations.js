@@ -44,6 +44,7 @@ animation.addEventListener("DOMLoaded", function () {
   let tl = gsap
     .timeline({
       scrollTrigger: {
+        markers: true,
         trigger: target,
         pin: true,
         scrub: 10,
@@ -124,6 +125,7 @@ function aniamtionTwo() {
     let tl2 = gsap
       .timeline({
         scrollTrigger: {
+          markers: true,
           trigger: target2,
           pin: true,
           scrub: 1,

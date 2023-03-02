@@ -9,9 +9,7 @@ LIs.forEach(function (li, i) {
 
 var accItem = document.getElementsByClassName("accordionItem");
 var accHD = document.getElementsByClassName("accordionItemHeading");
-for (i = 0; i < accHD.length; i++) {
-  accHD[i].addEventListener("click", toggleItem, false);
-}
+
 function toggleItem() {
   var itemClass = this.parentNode.className;
   for (i = 0; i < accItem.length; i++) {
@@ -22,11 +20,6 @@ function toggleItem() {
   }
 }
 
-/*
-let flag = false;
-
-document.getElementById("myButton").addEventListener("click", function () {
-  flag = !flag;
-  this.innerHTML = flag ? "CLOSE" : "MENU";
-});
-*/
+for (i = 0; i < accHD.length; i++) {
+  accHD[i].addEventListener("click", toggleItem, false);
+}
