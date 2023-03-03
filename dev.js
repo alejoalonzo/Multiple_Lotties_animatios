@@ -46,6 +46,8 @@ let tl3 = gsap
   .timeline()
   .to(".titleHeroAnimation31", 0, { opacity: 1 }, 0)
   .to(".titleHeroAnimation31", 0.01, { opacity: 0 }, 0.02)
+  .to(".butonUnderTitleAnimation3", 0, { opacity: 1 }, 0)
+  .to(".butonUnderTitleAnimation3", 0.01, { opacity: 0 }, 0.02)
   .to(".animation3textInfoRight1", 0.01, { opacity: 1 }, 0.05)
   .to(".animation3textInfoRight1", 0.01, { opacity: 0 }, 0.12)
   .to(".animation3textInfoRight2", 0.01, { opacity: 1 }, 0.14)
