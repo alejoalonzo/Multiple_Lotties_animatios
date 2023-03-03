@@ -86,6 +86,9 @@ text-align: center !important;
 .maginCero {
 margin: 0% auto !;
 }
+.marginBottom100{
+  margin-bottom: 100px;
+}
 
 .marginTop800 {
 margin-top: 800px;
