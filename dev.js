@@ -74,6 +74,8 @@ let tl5 = gsap
   .timeline()
   .to(".titleHeroAnimation51", 0, { opacity: 1 }, 0)
   .to(".titleHeroAnimation51", 0.01, { opacity: 0 }, 0.04)
+  .to(".butonUnderTitleAnimation5", 0, { opacity: 1 }, 0)
+  .to(".butonUnderTitleAnimation5", 0.01, { opacity: 0 }, 0.04)
   .to(".titleHeroAnimation52", 0.01, { opacity: 1 }, 0.005)
   .to(".titleHeroAnimation52", 0.01, { opacity: 0 }, 0.04)
   .to(".animation5textInfoRight1", 0.01, { opacity: 1 }, 0.05)
