@@ -27,6 +27,8 @@ let tl2 = gsap
   .to(".titleHeroAnimation21", 0, { opacity: 1, top: "200px" }, 0)
   .to(".titleHeroAnimation21", 0.02, { top: "200px" }, 0.02)
   .to(".titleHeroAnimation21", 0.02, { opacity: 0 }, 0.12)
+  .to(".butonUnderTitleAnimation2", 0, { opacity: 1 }, 0.0)
+  .to(".butonUnderTitleAnimation2", 0.02, { opacity: 0 }, 0.12)
   .to(".animation2textInfoLeft1", 0.01, { opacity: 1 }, 0.13)
   .to(".animation2textInfoLeft1", 0.01, { opacity: 0 }, 0.16)
   .to(".animation2textInfoLeft2", 0.01, { opacity: 1 }, 0.13)
@@ -39,6 +41,7 @@ let tl2 = gsap
   // .to(".animation2textInfoLeft5", 0.04, {opacity: 0 }, 0.5)
   .to(".animation2textInfoLeft6", 0.04, { opacity: 1 }, 0.28)
   .to(".animation2textInfoLeft6", 0.02, { opacity: 0 }, 0.5);
+
 let tl3 = gsap
   .timeline()
   .to(".titleHeroAnimation31", 0, { opacity: 1 }, 0)

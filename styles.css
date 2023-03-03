@@ -176,6 +176,17 @@
     top:0em;
     padding:0 0.1em;
   }
+  .butonUnderTitles{
+    font-family: "aktiv-grotesk", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    opacity: 0;
+    text-align: center;
+    z-index: 101;
+    font-size: 20px;
+  }
+
   /*-----------------------------------ANIMATION1---*/
   .titleHeroMegaBoltLine1{
     position: relative;
