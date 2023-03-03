@@ -849,9 +849,17 @@ top:300px;
 .titleHeroAnimation62{
 top:350px;
 }
+.lottieSection{
+  width:100vw;
+  height:auto;
+}
 }
 
 @media (max-width: 420px) {
+.lottieSection{
+  width:100vw;
+  height:auto;
+}
 .titleHero {
   font-size: 28px;
   display: inline;
@@ -891,5 +899,8 @@ top:300px;
 .titleHeroAnimation62{
 top:350px;
 }
-
+.lottieSection{
+  width:100vw;
+  height:auto;
+}   
 }

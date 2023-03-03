@@ -2,28 +2,6 @@ let lottieObjects = [];
 gsap.registerPlugin(ScrollToPlugin);
 
 let sections = document.querySelectorAll(".lottieSection");
-window.onload = function () {
-  var arrowBlackBackToTop = document.getElementById("arrowBlackBackToTop");
-  var backToTopText = document.getElementById("backToTheTopText");
-  var buttonMORE = document.getElementById("buttonMORE");
-
-  if (arrowBlackBackToTop && backToTopText) {
-    window.addEventListener("resize", function () {
-      if (window.innerWidth <= 767) {
-        backToTopText.style.display = "none";
-        arrowBlackBackToTop.style.display = "block";
-        buttonMORE.style.display = "block";
-      } else {
-        arrowBlackBackToTop.style.display = "none";
-        backToTopText.innerHTML = "BACK TO THE TOP";
-      }
-    });
-  } else {
-    console.error(
-      "One or both elements with the specified ids were not found on the page."
-    );
-  }
-};
 
 //------------------------------------------------Animation 1
 //        window.addEventListener("load", function () {
@@ -39,15 +17,15 @@ let tl1 = gsap
   .to(".animation1textInfoLeft1", 0.04, { opacity: 0 }, 1.5)
   .to(".animation1textInfoLeft2", 0.04, { opacity: 1 }, 0.74)
   .to(".animation1textInfoLeft2", 0.04, { opacity: 0 }, 1.5)
-  .to(".animation1textInfoLeft3", 0.04, { opacity: 1 }, 0.48)
+  .to(".animation1textInfoLeft3", 0.04, { opacity: 1 }, 1.55)
   .to(".animation1textInfoLeft3", 0.04, { opacity: 0 }, 2) //1.5
   .to(".animation1textInfoLeft4", 0.04, { opacity: 1 }, 1.55)
   .to(".animation1textInfoLeft4", 0.01, { opacity: 0 }, 2);
 
 let tl2 = gsap
   .timeline()
-  .to(".titleHeroAnimation21", 0, { opacity: 1, top: "-150px" }, 0)
-  .to(".titleHeroAnimation21", 0.02, { top: "150px" }, 0.02)
+  .to(".titleHeroAnimation21", 0, { opacity: 1, top: "200px" }, 0)
+  .to(".titleHeroAnimation21", 0.02, { top: "200px" }, 0.02)
   .to(".titleHeroAnimation21", 0.02, { opacity: 0 }, 0.12)
   .to(".animation2textInfoLeft1", 0.01, { opacity: 1 }, 0.13)
   .to(".animation2textInfoLeft1", 0.01, { opacity: 0 }, 0.16)
@@ -146,6 +124,8 @@ let tlFinal = gsap
   .to(".titleHeroAnimation75", 0.02, { opacity: 0 }, 2)
   .to(".titleHeroAnimation76", 0, { opacity: 1 }, 1.6)
   .to(".titleHeroAnimation76", 0.02, { opacity: 0 }, 2)
+  .to(".titleHeroAnimation77", 0, { opacity: 1 }, 1.6)
+  .to(".titleHeroAnimation77", 0.02, { opacity: 0 }, 2)
   .to(".buttonBackToTopAnimation", 0, { opacity: 1 }, 1.6)
   .to(".buttonBackToTopAnimation", 0.02, { opacity: 0 }, 2);
 
@@ -154,7 +134,7 @@ let tlFinal = gsap
 let tweenSet = [tl1, tl2, tl3, tl4, tl5, tl6, tl7, tlFinal];
 //----------Anchor click Scroll animation
 let anchorLists = document.querySelectorAll("li");
-let anchors = document.querySelectorAll(".buttonsAnimations");
+let anchors = document.querySelectorAll(".buttonsAnimations, .buttonBackToTop");
 
 let lottiePaths = [
   "https://lottie.host/bf18689a-d055-408a-8d8a-cdf340495b9c/sEAkTVD34j.json",
@@ -201,22 +181,47 @@ function checkOn(animation) {
   });
 }
 
+function scrollingOff() {
+  scrolling = 0;
+}
+
 // On Click indicatiing Anchor
 window.addEventListener("load", function () {
   anchors.forEach((anchor, index) => {
     anchor.addEventListener("click", function (event) {
+      scrolling = 1;
       event.preventDefault();
       let windowHeight = window.innerHeight;
       let currentLocation = Math.round(window.scrollY);
       let clickedAnchorLocation = sections[index].getBoundingClientRect().top;
-      let goTo = Math.round(currentLocation + clickedAnchorLocation - 5024);
-      if (currentLocation > clickedAnchorLocation) {
-        gsap.to(window, { duration: 2, scrollTo: goTo });
-        //scrollController.scrollTo(goTo);
-      } else {
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
+      let goTo = this.getAttribute("href");
+      console.log(goTo);
+      if (goTo == "#lottie-trigger") {
+        scrollController.scrollTo(function (newpos) {
+          gsap.to(window, 2, {
+            scrollTo: { y: newpos + 950 },
+            onComplete: scrollingOff,
+          });
+          console.log("800 ofset added");
         });
+      } else {
+        scrollController.scrollTo(function (newpos) {
+          gsap.to(window, 2, {
+            scrollTo: { y: newpos },
+            onComplete: scrollingOff,
+          });
+        });
+      }
+      scrollController.scrollTo(this.getAttribute("href"));
+
+      //gsap.to(window, { duration: 2, scrollTo: goTo });
+
+      if (currentLocation > clickedAnchorLocation) {
+        //gsap.to(window, { duration: 2, scrollTo: goTo });
+      } else {
+        //document.querySelector(this.getAttribute("href")).scrollIntoView({
+        // behavior: "smooth",
+        //});
       }
       changeStyle(index);
     });
@@ -250,3 +255,10 @@ function changeStyle(position) {
 
 let headerText = document.querySelector(".nectar-header-text-content div");
 headerText.textContent = "";
+
+document
+  .getElementById("buttonMORE")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    // your code here
+  });
